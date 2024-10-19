@@ -1,21 +1,15 @@
-# Время года
-def season(day, month):
-    if (month == 3 and day >= 1) or (month == 4) or (month == 5) or (month == 6 and day < 1):
+d=int(input("Введите день: "))
+m=int(input("Введите месяц: "))
+
+def season(d, m):
+    if (m == 3 and d >= 1) or (m == 4) or (m == 5) or (m == 6 and d < 1):
         return "Весна"
-    elif (month == 6 and day >= 1) or (month == 7) or (month == 8) or (month == 9 and day < 1):
+    elif (m == 6 and d >= 1) or (m == 7) or (m == 8) or (m == 9 and d < 1):
         return "Лето"
-    elif (month == 9 and day >= 1) or (month == 10) or (month == 11) or (month == 12 and day < 1):
+    elif (m == 9 and d >= 1) or (m == 10) or (m == 11) or (m == 12 and d < 1):
         return "Осень"
     else:
         return "Зима"
 
-# Ввод данных
-day = int(input("Введите день (1-31): "))
-month = int(input("Введите месяц (1-12): "))
-
-
-if (1 <= day <= 31) and (1 <= month <= 12):
-    season = season(day, month)
-    print(f"Эта дата относится к сезону: {season}")
-else:
-    print("Некорректный ввод даты.")
+vremya_goda=season(d,m)
+print("Эта дата относится к сезону", vremya_goda)
